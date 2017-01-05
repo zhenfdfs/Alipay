@@ -23,6 +23,7 @@ class SdkPayment
 	private $notify_url;
 
 	private $out_trade_no;
+	private $it_b_pay;
 
 	private $subject;
 
@@ -63,6 +64,7 @@ class SdkPayment
 			'notify_url' => $this->notify_url,
 			'seller_id' => $this->seller_id,
 			'out_trade_no' => $this->out_trade_no,
+			'it_b_pay' => $this->it_b_pay,
 			'subject' => $this->subject,
 			'total_fee' => $this->total_fee,
 			'body' => $this->body,
@@ -125,7 +127,11 @@ class SdkPayment
 		$this->out_trade_no = $out_trade_no;
 		return $this;
 	}
-
+	public function setItBPay($it_b_pay)
+	{
+		$this->it_b_pay = $it_b_pay;
+		return $this;
+	}
 	public function setPartner($partner)
 	{
 		$this->partner = $partner;
